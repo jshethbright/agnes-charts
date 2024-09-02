@@ -3,6 +3,16 @@ entries:
   samba:
   - apiVersion: v2
     appVersion: smbd-wsdd2-latest
+    created: "2024-09-02T04:55:52.929288491Z"
+    description: A Helm chart for Kubernetes
+    digest: 67dd40fe2fd6c9a7e63144b404acf451b81781e3051c76802ec86d23702bc8b9
+    name: samba
+    type: application
+    urls:
+    - https://github.com/jshethbright/agnes-charts/releases/download/samba-0.2.0/samba-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: smbd-wsdd2-latest
     created: "2024-09-02T04:42:21.275625122Z"
     description: A Helm chart for Kubernetes
     digest: 76239c77a216f260a432b9aed093a07bff0d5bfe7ec2616d085f3948d60d29a7
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/jshethbright/agnes-charts/releases/download/samba-0.1.0/samba-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-02T04:42:21.275884235Z"
+generated: "2024-09-02T04:55:52.929340188Z"
