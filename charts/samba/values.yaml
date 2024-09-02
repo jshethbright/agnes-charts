@@ -16,6 +16,8 @@ secretRefs:
     usernameKey: username
     passwordKey: password
 
+shareName: Media
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

@@ -46,8 +46,7 @@ spec:
             - name: ACCOUNT_ADMIN # Need to figure out how to add user from secret here
               value: $(PASSWORD)
             - name: SAMBA_VOLUME_CONFIG_admin # Need to figure out how to add user from secret here
-              value: '[Media]; path=/smbshare/; guest ok
-            = no; read only = no; browseable = yes'
+              value: "[{{ .Values.shareName }}]; path=/smbshare/; guest ok = no; read only = no; browseable = yes"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
