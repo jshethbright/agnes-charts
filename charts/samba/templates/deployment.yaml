@@ -33,7 +33,7 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
-            - name: USERNAME
+            - name: ADMIN
               valueFrom:
                 secretKeyRef: 
                   name: {{ .Values.secretRefs.sambaCreds.name }}
@@ -43,6 +43,11 @@ spec:
                 secretKeyRef: 
                   name: {{ .Values.secretRefs.sambaCreds.name }}
                   key: {{ .Values.secretRefs.sambaCreds.passwordKey }}
+            - name: ACCOUNT_ADMIN # Need to figure out how to add user from secret here
+              value: $(PASSWORD)
+            - name: SAMBA_VOLUME_CONFIG_admin # Need to figure out how to add user from secret here
+              value: '[$(ADMIN) share]; path=/smbshare/; guest ok
+            = no; read only = no; browseable = yes'
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
