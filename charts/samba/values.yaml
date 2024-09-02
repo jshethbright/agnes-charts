@@ -26,7 +26,8 @@ podAnnotations: {}
 podLabels: {}
 
 service:
-  type: LoadBalancer
+  type: NodePort
+  nodePort: 31732
   port: 445
 
 ingress:
