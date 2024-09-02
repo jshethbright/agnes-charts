@@ -35,12 +35,14 @@ spec:
           env:
             - name: USERNAME
               valueFrom:
-                secretKeyRef: {{ .Values.secretRefs.sambaCreds.name }}
-                key: {{ .Values.secretRefs.sambaCreds.usernameKey }}
+                secretKeyRef: 
+                  name: {{ .Values.secretRefs.sambaCreds.name }}
+                  key: {{ .Values.secretRefs.sambaCreds.usernameKey }}
             - name: PASSWORD
               valueFrom:
-                secretKeyRef: {{ .Values.secretRefs.sambaCreds.name }}
-                key: {{ .Values.secretRefs.sambaCreds.passwordKey }}
+                secretKeyRef: 
+                  name: {{ .Values.secretRefs.sambaCreds.name }}
+                  key: {{ .Values.secretRefs.sambaCreds.passwordKey }}
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
