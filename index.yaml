@@ -3,6 +3,16 @@ entries:
   homebridge:
   - apiVersion: v2
     appVersion: "2024-06-27"
+    created: "2024-09-22T09:58:52.482164083Z"
+    description: A Helm chart for Kubernetes
+    digest: 28ba83205a34888ee48ec0be13caf38fa93d2a02ec57189b222968aba26e71bd
+    name: homebridge
+    type: application
+    urls:
+    - https://github.com/jshethbright/agnes-charts/releases/download/homebridge-0.2.0/homebridge-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: "2024-06-27"
     created: "2024-09-22T09:48:30.039044974Z"
     description: A Helm chart for Kubernetes
     digest: 27b606e7abc47b5dbf1e31ea13e598ed4102b6a5a7d0a57f781c23cfbc8674ca
@@ -92,4 +102,4 @@ entries:
     urls:
     - https://github.com/jshethbright/agnes-charts/releases/download/samba-0.1.0/samba-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-22T09:48:30.039064059Z"
+generated: "2024-09-22T09:58:52.48218946Z"
