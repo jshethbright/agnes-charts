@@ -52,7 +52,7 @@ spec:
           {{- end }}
           env:
             - name: HOMEBRIDGE_CONFIG_UI
-              value: 1
+              value: "1"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
