@@ -125,6 +125,16 @@ entries:
   webdav:
   - apiVersion: v2
     appVersion: latest
+    created: "2024-10-09T06:09:42.665701838Z"
+    description: A Helm chart for Kubernetes
+    digest: d0106886d9362f51992fb8240f28344aa87e3ce2dafcd5b46e25b58767ae93e4
+    name: webdav
+    type: application
+    urls:
+    - https://github.com/jshethbright/agnes-charts/releases/download/webdav-0.1.1/webdav-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: latest
     created: "2024-10-09T05:53:13.932988484Z"
     description: A Helm chart for Kubernetes
     digest: b0bca0cf48b2003ca6d58746dbca842f14b8800d565f1f0b9b61c3646a4a2ec1
@@ -133,4 +143,4 @@ entries:
     urls:
     - https://github.com/jshethbright/agnes-charts/releases/download/webdav-0.1.0/webdav-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-09T05:53:13.93303453Z"
+generated: "2024-10-09T06:09:42.665756924Z"
