@@ -122,4 +122,15 @@ entries:
     urls:
     - https://github.com/jshethbright/agnes-charts/releases/download/samba-0.1.0/samba-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-22T11:40:51.18316671Z"
+  webdav:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-10-09T05:53:13.932988484Z"
+    description: A Helm chart for Kubernetes
+    digest: b0bca0cf48b2003ca6d58746dbca842f14b8800d565f1f0b9b61c3646a4a2ec1
+    name: webdav
+    type: application
+    urls:
+    - https://github.com/jshethbright/agnes-charts/releases/download/webdav-0.1.0/webdav-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-10-09T05:53:13.93303453Z"
