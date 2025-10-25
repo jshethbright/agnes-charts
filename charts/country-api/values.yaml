@@ -8,6 +8,7 @@ replicaCount: 1
 monitoring:
   enabled: true
 
+apiUrl: https://restcountries.com/v3.1/all?fields=name,cca2
 
 cacheFilePath: /cache/data.json
 
