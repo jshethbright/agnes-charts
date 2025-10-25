@@ -1,0 +1,26 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+    name: {{ include "country-api.fullname" . }}
+    labels:
+      {{- include "country-api.labels" . | nindent 4 }}
+rules:
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+    name: {{ include "country-api.fullname" . }}
+    labels:
+      {{- include "country-api.labels" . | nindent 4 }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "country-api.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: Role
+  name: {{ include "country-api.fullname" . }}
+  apiGroup: rbac.authorization.k8s.io
