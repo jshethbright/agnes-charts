@@ -1,0 +1,13 @@
+{{- if .Values.monitoring.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: {{ include "country-api.fullname" . }}
+  labels:
+    {{- include "country-api.labels" . | nindent 4 }}
+spec:
+    serviceMonitorSelector:
+        matchLabels:
+            {{- include "country-api.selectorLabels" . | nindent 10 }}
+    serviceAccountName: {{ include "country-api.serviceAccountName" . }}
+{{- end }}
