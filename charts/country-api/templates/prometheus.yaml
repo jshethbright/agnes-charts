@@ -7,7 +7,6 @@ metadata:
   labels:
     {{- include "country-api.labels" . | nindent 4 }}
 spec:
-  externalUrl: "http://{{ include "country-api.fullname" . }}-prometheus.{{ .Release.Namespace }}:9090"
   serviceMonitorSelector:
     matchLabels:
       {{- include "country-api.selectorLabels" . | nindent 6 }}

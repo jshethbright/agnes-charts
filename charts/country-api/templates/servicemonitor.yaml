@@ -10,7 +10,7 @@ spec:
     matchLabels:
       {{- include "country-api.selectorLabels" . | nindent 6 }}
   endpoints:
-    - port: api-service
+    - targetPort: {{ .Values.service.port }}
       path: /metrics
       interval: 30s
 {{- end }}
