@@ -1,4 +1,5 @@
 {{- if .Values.monitoring.enabled }}
+---
 apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
@@ -6,8 +7,34 @@ metadata:
   labels:
     {{- include "country-api.labels" . | nindent 4 }}
 spec:
-    serviceMonitorSelector:
-        matchLabels:
-            {{- include "country-api.selectorLabels" . | nindent 10 }}
-    serviceAccountName: {{ include "country-api.serviceAccountName" . }}
+  serviceMonitorSelector:
+    matchLabels:
+      {{- include "country-api.selectorLabels" . | nindent 6 }}
+  serviceAccountName: {{ include "country-api.serviceAccountName" . }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "country-api.fullname" . }}-prometheus
+  labels:
+    {{- include "country-api.labels" . | nindent 4 }}
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "endpoints", "nodes"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "country-api.fullname" . }}-prometheus
+  labels:
+    {{- include "country-api.labels" . | nindent 4 }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "country-api.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: {{ include "country-api.fullname" . }}-prometheus
+  apiGroup: rbac.authorization.k8s.io
 {{- end }}
