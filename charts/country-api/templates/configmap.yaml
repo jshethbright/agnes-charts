@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: country-api-cache
+    labels:
+      {{- include "country-api.labels" . | nindent 4 }}
+data:
+  data.json: |
+    {}
