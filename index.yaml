@@ -3,6 +3,16 @@ entries:
   country-api:
   - apiVersion: v2
     appVersion: v0.0.7
+    created: "2025-10-27T06:39:13.423529248Z"
+    description: A Helm chart for Kubernetes
+    digest: d5e78b1d0705bb6c361de911728761603b286dc600bf4e7bc8bc755aadc97b22
+    name: country-api
+    type: application
+    urls:
+    - https://github.com/jshethbright/agnes-charts/releases/download/country-api-0.1.8/country-api-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: v0.0.7
     created: "2025-10-25T09:40:51.077104147Z"
     description: A Helm chart for Kubernetes
     digest: 62202a81a4703eb08c719f78adab5fb3394fa5206b2cd50c63f333aeec1cc985
@@ -244,4 +254,4 @@ entries:
     urls:
     - https://github.com/jshethbright/agnes-charts/releases/download/webdav-0.1.0/webdav-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-25T09:40:51.077141824Z"
+generated: "2025-10-27T06:39:13.42359952Z"
